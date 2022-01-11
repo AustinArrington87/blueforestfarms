@@ -1,3 +1,5 @@
+<head>
+</head>
 <body>
 <h1>Blue Forest Farms Intake Form</h1>
 
@@ -7,7 +9,7 @@
   Pain: <input type="number" name="pain" id="pain"><br>
   Anxiety: <input type="number" name="anxiety" id="anxiety"><br>
   Sleep Quality: <input type="number" name="sleepq" id="sleepq"><br>
-  Falling Asleep: <input type="number" name="sleepf" id="sleepf"><br>
+  Falling Asleep: <input type="number" name="sleepf" id="sleepf"><br>+
   Stress: <input type="number" name="stress" id="stress"><br>
   Relaxation: <input type="number" name="relaxation" id="relaxation"><br>
   Focus: <input type="number" name="focus" id="focus"><br>
