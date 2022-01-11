@@ -1,21 +1,25 @@
+<html>
 <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 <body>
-<h1>Blue Forest Farms Intake Form</h1>
+<h1 class="text-primary">Blue Forest Farms Intake Form</h1>
 
-<p>Give a Rating from 1 to 5</p>
-    
+<h2>Rate from 1 to 5</h2>
+<p>Fill out at least 3 fields for a recommendation</p>
 
   Pain: <input type="number" name="pain" id="pain"><br>
   Anxiety: <input type="number" name="anxiety" id="anxiety"><br>
   Sleep Quality: <input type="number" name="sleepq" id="sleepq"><br>
-  Falling Asleep: <input type="number" name="sleepf" id="sleepf"><br>+
+  Falling Asleep: <input type="number" name="sleepf" id="sleepf"><br>
   Stress: <input type="number" name="stress" id="stress"><br>
   Relaxation: <input type="number" name="relaxation" id="relaxation"><br>
   Focus: <input type="number" name="focus" id="focus"><br>
   Energy: <input type="number" name="energy" id="energy"><br>
   <br>
   <button onclick="add(document.getElementById('pain').value,document.getElementById('anxiety').value,document.getElementById('sleepq').value,document.getElementById('stress').value,document.getElementById('sleepf').value,document.getElementById('relaxation').value,document.getElementById('focus').value,document.getElementById('energy').value)">Get Recommendation</button>
+    
+    <button onclick="addNoTHC(document.getElementById('pain').value,document.getElementById('anxiety').value,document.getElementById('sleepq').value,document.getElementById('stress').value,document.getElementById('sleepf').value,document.getElementById('relaxation').value,document.getElementById('focus').value,document.getElementById('energy').value)">Get Rec - No THC</button>
 
 <script>
     // remove duplicates 
@@ -31,124 +35,124 @@
       
       if (parseInt(pain)==1) {
           rec1 = "No rec"
-      }
+      };
       if (parseInt(pain)==2) {
           rec2 = "07 drops"
-      }
+      };
       if (parseInt(pain)==3) {
           rec3 = "07 softgel as needed"
-      }
+      };
       if (parseInt(pain)==4) {
           rec4 = "07 softgel as needed"
-      }
+      };
       if (parseInt(pain)>=5) {
           rec5 = "07 softgel as needed"
-      }
+      };
       if (parseInt(anxiety)==1) {
           rec6 = "No rec"
-      }
+      };
       if (parseInt(anxiety)==2) {
           rec7 = "02 gummies as needed"
-      }
+      };
       if (parseInt(anxiety)==3) {
           rec8 = "02 drops"
-      }
+      };
       if (parseInt(anxiety)==4) {
           rec9 = "02 drops"
-      }
+      };
       if (parseInt(anxiety)>=5) {
           rec10 = "02 drops"
-      }
+      };
       if (parseInt(sleepq)==1) {
           rec11 = "07 softgel as needed"
-      }
+      };
       if (parseInt(sleepq)==2) {
           rec12 = "07 softgel as needed"
-      }
+      };
       if (parseInt(sleepq)==3) {
           rec13 = "07 drops"
-      }
+      };
       if (parseInt(sleepq)==4) {
           rec14 = "07 drops"
-      }
+      };
       if (parseInt(sleepq)>=5) {
           rec15 = "No rec"
-      }
+      };
       if (parseInt(stress)==1) {
           rec16 = "No rec"
-      }
+      };
       if (parseInt(stress)==2) {
           rec17 = "07 drops"
-      }
+      };
       if (parseInt(stress)==3) {
           rec18 = "07 drops"
-      }
+      };
       if (parseInt(stress)==4) {
           rec19 = "07 softgel as needed"
-      }
+      };
       if (parseInt(stress)>=5) {
           rec20 = "07 softgel as needed"
-      }
+      };
       if (parseInt(sleepf)==1) {
           rec21 = "06 drops"
-      }
+      };
       if (parseInt(sleepf)==2) {
           rec22 = "06 drops"
-      }
+      };
       if (parseInt(sleepf)==3) {
           rec23 = "06 drops"
-      }
+      };
       if (parseInt(sleepf)==4) {
           rec24 = "06 drops"
-      }
+      };
       if (parseInt(sleepf)>=5) {
           rec25 = "No rec"
-      }
+      };
       if (parseInt(relaxation)==1) {
           rec26 = "03 drops"
-      }
+      };
       if (parseInt(relaxation)==2) {
           rec27 = "03 drops"
-      }
+      };
       if (parseInt(relaxation)==3) {
           rec28 = "03 drops"
-      }
+      };
       if (parseInt(relaxation)==4) {
           rec29 = "03 drops"
-      }
+      };
       if (parseInt(relaxation)>=5) {
           rec30 = "No rec"
-      }
+      };
       if (parseInt(focus)==1) {
           rec31 = "03 drops"
-      }
+      };
       if (parseInt(focus)==2) {
           rec32 = "03 drops"
-      }
+      };
       if (parseInt(focus)==3) {
           rec33 = "03 drops"
-      }
+      };
       if (parseInt(focus)==4) {
           rec34 = "03 drops"
       }
       if (parseInt(focus)==5) {
           rec35 = "No rec"
-      }
+      };
       if (parseInt(energy)==1) {
           rec36 = "04 drops"
-      }
+      };
       if (parseInt(energy)==2) {
           rec37 = "04 drops"
-      }
+      };
       if (parseInt(energy)==3) {
           rec38 = "04 drops"
-      }
+      };
       if (parseInt(energy)==4) {
           rec39 = "04 drops"
-      }
+      };
       if (parseInt(energy)>=5) {
           rec40 = "No rec"
-      }
+      };
       var finalRec = [rec1,rec2,rec3,rec4,rec5,rec6,rec7,rec8,rec9,rec10,rec11,rec12,rec13,rec14,rec15,rec16,rec17,rec18,rec19,rec20,rec21,rec22,rec23,rec24,rec25,rec26,rec27,rec28,rec29,rec30,rec31,rec32,rec33,rec34,rec35,rec36,rec37,rec38,rec39,rec40];
       // remove duplicates
       var d = removeDup(finalRec);
@@ -161,6 +165,148 @@
         return el != null
       })
     alert(filtered);
-  }
+  }; 
+    
+    // Recs - No THC 
+    
+    function addNoTHC(pain,anxiety,sleepq,stress,sleepf,relaxation,focus,energy) {
+      
+      var rec1, rec2, rec3, rec4, rec5, rec6, rec7, rec8, rec9, rec10, rec11, rec12, rec13, rec14, rec15, rec16, rec17, rec18, rec19, rec20, rec21, rec22, rec23, rec24, rec25, rec26, rec27, rec28, rec29, rec30, rec30, rec31, rec32, rec33, rec34, rec35, rec36, rec37, rec38, rec39, rec40;
+      
+      if (parseInt(pain)==1) {
+          rec1 = "No rec"
+      };
+      if (parseInt(pain)==2) {
+          rec2 = "01 Restore"
+      };
+      if (parseInt(pain)==3) {
+          rec3 = "01 Restore"
+      };
+      if (parseInt(pain)==4) {
+          rec4 = "01 Restore"
+      };
+      if (parseInt(pain)>=5) {
+          rec5 = "01 Restore"
+      };
+      if (parseInt(anxiety)==1) {
+          rec6 = "No rec"
+      };
+      if (parseInt(anxiety)==2) {
+          rec7 = "02 gummies as needed"
+      };
+      if (parseInt(anxiety)==3) {
+          rec8 = "02 drops"
+      };
+      if (parseInt(anxiety)==4) {
+          rec9 = "02 drops"
+      };
+      if (parseInt(anxiety)>=5) {
+          rec10 = "02 drops"
+      };
+      if (parseInt(sleepq)==1) {
+          rec11 = "01 Restore"
+      };
+      if (parseInt(sleepq)==2) {
+          rec12 = "01 Restore"
+      };
+      if (parseInt(sleepq)==3) {
+          rec13 = "01 Restore"
+      };
+      if (parseInt(sleepq)==4) {
+          rec14 = "01 Restore"
+      };
+      if (parseInt(sleepq)>=5) {
+          rec15 = "No rec"
+      };
+      if (parseInt(stress)==1) {
+          rec16 = "No rec"
+      };
+      if (parseInt(stress)==2) {
+          rec17 = "07 drops"
+      };
+      if (parseInt(stress)==3) {
+          rec18 = "07 drops"
+      };
+      if (parseInt(stress)==4) {
+          rec19 = "07 softgel as needed"
+      };
+      if (parseInt(stress)>=5) {
+          rec20 = "07 softgel as needed"
+      };
+      if (parseInt(sleepf)==1) {
+          rec21 = "06 drops"
+      };
+      if (parseInt(sleepf)==2) {
+          rec22 = "06 drops"
+      };
+      if (parseInt(sleepf)==3) {
+          rec23 = "06 drops"
+      };
+      if (parseInt(sleepf)==4) {
+          rec24 = "06 drops"
+      };
+      if (parseInt(sleepf)>=5) {
+          rec25 = "No rec"
+      };
+      if (parseInt(relaxation)==1) {
+          rec26 = "03 drops"
+      };
+      if (parseInt(relaxation)==2) {
+          rec27 = "03 drops"
+      };
+      if (parseInt(relaxation)==3) {
+          rec28 = "03 drops"
+      };
+      if (parseInt(relaxation)==4) {
+          rec29 = "03 drops"
+      };
+      if (parseInt(relaxation)>=5) {
+          rec30 = "No rec"
+      };
+      if (parseInt(focus)==1) {
+          rec31 = "03 drops"
+      };
+      if (parseInt(focus)==2) {
+          rec32 = "03 drops"
+      };
+      if (parseInt(focus)==3) {
+          rec33 = "03 drops"
+      };
+      if (parseInt(focus)==4) {
+          rec34 = "03 drops"
+      }
+      if (parseInt(focus)==5) {
+          rec35 = "No rec"
+      };
+      if (parseInt(energy)==1) {
+          rec36 = "04 drops"
+      };
+      if (parseInt(energy)==2) {
+          rec37 = "04 drops"
+      };
+      if (parseInt(energy)==3) {
+          rec38 = "04 drops"
+      };
+      if (parseInt(energy)==4) {
+          rec39 = "04 drops"
+      };
+      if (parseInt(energy)>=5) {
+          rec40 = "No rec"
+      };
+      var finalRec = [rec1,rec2,rec3,rec4,rec5,rec6,rec7,rec8,rec9,rec10,rec11,rec12,rec13,rec14,rec15,rec16,rec17,rec18,rec19,rec20,rec21,rec22,rec23,rec24,rec25,rec26,rec27,rec28,rec29,rec30,rec31,rec32,rec33,rec34,rec35,rec36,rec37,rec38,rec39,rec40];
+      // remove duplicates
+      var d = removeDup(finalRec);
+      // if there are multiple items, remove "remove no rec"
+      if (d.length > 1) {
+          d = d.filter(e => e !== 'No rec');
+      }
+    // remove null
+      var filtered = d.filter(function (el) {
+        return el != null
+      })
+    alert(filtered);
+  }; 
+
 </script>
 </body>
+</html>
