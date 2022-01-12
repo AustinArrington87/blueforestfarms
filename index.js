@@ -13,9 +13,3 @@
 
         emailjs.send('emailJS_ServiceCode', 'emailJS_TemplateCode', contactParams).then(function (res) {});
 };
-    
-    // remove duplicates 
-    function removeDup(arr) {
-    let result = arr.filter(function (item, pos) {return arr.indexOf(item) == pos}); 
-    return result;
-};
