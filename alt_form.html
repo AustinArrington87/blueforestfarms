@@ -12,16 +12,16 @@
 <h1 class="text-primary">BFF Intake Form</h1>
 
 <h2>Rate from 1 to 5</h2>
-<h4 class="text-info">User Note: 1 is less and 5 is more. So in the case of pain for example, 5 is high pain. &#129301; In the case of sleep quality, 5 means you get good sleep. &#128564;</h4>
+<h4 class="text-info">On a scale of 1 to 5 please answer the following</h4>
 
-  Pain: <input type="number" name="pain" id="pain"><br>
-  Anxiety: <input type="number" name="anxiety" id="anxiety"><br>
-  Sleep Quality: <input type="number" name="sleepq" id="sleepq"><br>
-  Falling Asleep: <input type="number" name="sleepf" id="sleepf"><br>
-  Stress: <input type="number" name="stress" id="stress"><br>
-  Relaxation: <input type="number" name="relaxation" id="relaxation"><br>
-  Focus: <input type="number" name="focus" id="focus"><br>
-  Energy: <input type="number" name="energy" id="energy"><br>
+  <strong>Pain</strong> low (1) or high (5) ?: <input type="number" name="pain" id="pain"><br>
+  <strong>Anxiety</strong> low (1) or high (5) ? <input type="number" name="anxiety" id="anxiety"><br>
+  <strong>Sleep quality</strong> poor (1) or great (5) ? <input type="number" name="sleepq" id="sleepq"><br>
+  <strong>Fall asleep</strong> poorly (1) or great (5) ? <input type="number" name="sleepf" id="sleepf"><br>
+  <strong>Stress</strong> low (1) or high (5) ? <input type="number" name="stress" id="stress"><br>
+  <strong>Relax</strong> poorly (1) or great (5) ? <input type="number" name="relaxation" id="relaxation"><br>
+  <strong>Focus</strong> poorly (1) or great (5) ? <input type="number" name="focus" id="focus"><br>
+  <strong>Energy</strong> low (1) or high (5) ? <input type="number" name="energy" id="energy"><br>
   <br>
   <button onclick="add(document.getElementById('pain').value,document.getElementById('anxiety').value,document.getElementById('sleepq').value,document.getElementById('stress').value,document.getElementById('sleepf').value,document.getElementById('relaxation').value,document.getElementById('focus').value,document.getElementById('energy').value)">Get Recommendation</button>
     
