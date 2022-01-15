@@ -24,6 +24,8 @@
     <button onclick="addNoTHC(document.getElementById('pain').value,document.getElementById('anxiety').value,document.getElementById('sleepq').value,document.getElementById('stress').value,document.getElementById('sleepf').value,document.getElementById('relaxation').value,document.getElementById('focus').value,document.getElementById('energy').value)">Get Rec - No THC</button>
 
 <script>
+    // refresh page option 
+        const refresh = "<br><br><button onClick='window.location.reload();'>Refresh Page</button>";
     // remove duplicates 
     function removeDup(arr) {
     let result = arr.filter(function (item, pos) {return arr.indexOf(item) == pos}); 
@@ -173,6 +175,8 @@
       // generate on screen alert 
     //alert(filtered);
       document.write(filtered);
+      // refresh page option 
+        document.write(refresh);
   }; 
     
     // Recs - No THC 
@@ -311,16 +315,18 @@
       // if there are multiple items, remove "remove no rec"
       if (d.length > 1) {
           d = d.filter(e => e !== 'No rec');
-      }
+      };
     // remove null
       var filtered = d.filter(function (el) {
         return el != null
-      })
+      });
       // email results 
       
       // generate on screen alert 
     //alert(filtered);
       document.write(filtered);
+        // refresh page option 
+        document.write(refresh);
   };  
 
 </script>
